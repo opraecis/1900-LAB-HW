@@ -11,17 +11,14 @@ public class AirportParking{
 		//Setting variables to default values
 		int numDays = minInput / 1440;
 		int totalMins = minInput % 1440;
-		int num30Mins = 0;
-		int numMins = 0;
+		int num30Mins = totalMins / 30 ;
+		int numMins = totalMins % 30;
 		int amountCharged = 24 * numDays; //initialized with day charges counted so we can focus on trivial ones.
 
 		if  (minInput < 0){
 			System.out.println("Error - Number out of bound.");
 		}
 		else {
-			num30Mins = totalMins / 30;
-			numMins = totalMins % 30;
-
 			if (numMins > 0){
 				num30Mins++;
 			} 
