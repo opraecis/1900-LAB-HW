@@ -15,7 +15,7 @@ public class AirportParking{
 
 		if (numMins > 0){
 				num30Mins++;
-			} 
+		} 
 
 		if  (minInput < 0){
 			System.out.println("Error - Number out of bound.");
