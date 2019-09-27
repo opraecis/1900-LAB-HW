@@ -8,7 +8,6 @@ public class AirportParking{
 		System.out.print("Enter number of parking minutes: ");
 		int minInput = scnr.nextInt();
 
-		//Setting variables to default values
 		int numDays = minInput / 1440;
 		int totalMins = minInput % 1440;
 		int num30Mins = totalMins / 30 ;
