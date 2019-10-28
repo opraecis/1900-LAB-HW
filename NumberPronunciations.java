@@ -31,14 +31,12 @@ public class NumberPronunciations{
 		else { // If n < 10
 			return oneDigitToStr(n);
 		}
-
 	}
 
 	public static String threeDigitToStr(int n){
 		if (n >= 100){
 			// if n != 100, 200, 300... then print the tens and singles digits in words, otherwise ignore them because they would be "zero"s
 			return  ((n%100)>0) ? (twoDigitToStr(n / 100) + " hundred " + twoDigitToStr(n % 100)) : (twoDigitToStr(n / 100) + " hundred");
-	
 		} 
 		else {
 			return twoDigitToStr(n);
