@@ -62,15 +62,19 @@ public class NumberPronunciations{
 	}
 
 	public static String numToStr(int n){
+
 		String numResult = "";
 
 		if (n == 0) return "zero"; //special case when the number is 0
+
+		/* Pronounce the number by filtering it through different layers that process different orders of magnitude. 
+		That can be achieved through removing the pronounced digits after each layer and send it down to the lower layers */
 
 		//when the number is in the billions
 		//pronounce the billions digit
 		if (n >= 1000000000){ 
 			numResult += threeDigitToStr(n / 1000000000) + " billion ";
-			// Return n with pronounced digits removed, for further processing
+			// Return n with pronounced billions digits removed, for further processing
 			n = (n % 1000000000);
 		}
 
@@ -78,7 +82,7 @@ public class NumberPronunciations{
 		// pronounce the millions, tens of millions, and hundreds of millions digits in a group of three
 		if (n >= 1000000){ 
 			numResult += threeDigitToStr(n / 1000000) + " million ";
-			/ Return n with pronounced digits removed, for further processing
+			// Return n with pronounced digits removed, for further processing
 			n = (n % 1000000);
 		}
 
