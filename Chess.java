@@ -17,7 +17,7 @@ public class Chess{
 												   {"bP", "bP", "", "", "bP", "bP", "bB", "bP"},
 												   {"", "", "bP", "bP", "", "bN", "bP", ""},
 												   {"", "", "", "", "", "", "", ""},
-												   {"", "", "wP", "bP", "", "bQ", "", ""},
+												   {"", "", "wP", "bP", "", "", "", ""},
 												   {"", "", "wN", "", "", "wN", "wP", ""},
 												   {"wP", "wP", "", "", "wP", "wP", "wB", "wP"},
 												   {"wR", "", "wB", "", "", "wR", "wK", ""} };
@@ -69,7 +69,10 @@ public class Chess{
 		for (int i = 0; i < board.length; i++){
 			for (int j = 0; j < board[i].length; j++){
 				if (board[i][j] != ""){
-					if (board[i][j].charAt(0) == color){
+					if (board[i][j].equals(color + "Q")){
+						board[i][j] = "Q";
+					}
+					else if (board[i][j].charAt(0) == color){
 						board[i][j] = "0";
 					}
 					else if (board[i][j].charAt(0) == opponent){
@@ -82,18 +85,16 @@ public class Chess{
 
 	}
 
-	public static void printBoard(String[][] board, int qRow, int qColumn){
+	public static void printBoard(String[][] board){
 
 		System.out.println("Current state of the board (0 is our team's, 1 is the opponent's, Q is our Queen: \n" +
 						   "-----------------------------------------------" );
 
 		for (int i = 0; i < board.length; i++){
 			for (int j = 0; j < board[i].length; j++){
-				if (i == qRow && j == qColumn){ 
-					System.out.print("Q" + "|");
-				}
-				else
+
 					System.out.print(board[i][j] + "|");
+
 			}
 			System.out.println();
 		}
@@ -114,7 +115,7 @@ public class Chess{
 
 		reBoard(board, color); // convert to a board of 0s and 1s just for visual aid.
 
-		printBoard(board, qRow, qColumn);
+		printBoard(board);
 
 		int i = qColumn - 1;  
 		while (left == false && i >= 0){ // Checking LEFT
