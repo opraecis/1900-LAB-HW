@@ -13,14 +13,14 @@ public class Chess{
 	public static void main(String[] args){
 		Scanner scnr = new Scanner(System.in);
 
-		String[][] chessBoard =					 { {"bR", "bN", "bB", "", "", "bR", "bK", ""},
-												   {"bP", "bP", "", "", "bP", "bP", "bB", "bP"},
-												   {"", "", "bP", "bP", "", "bN", "bP", ""},
-												   {"", "", "", "", "", "", "", ""},
-												   {"", "", "wP", "bP", "", "", "", ""},
-												   {"", "", "wN", "", "", "wN", "wP", ""},
-												   {"wP", "wP", "", "", "wP", "wP", "wB", "wP"},
-												   {"wR", "", "wB", "", "", "wR", "wK", ""} };
+		String[][] chessBoard =	 { {"bR", "bN", "bB", "", "", "bR", "bK", ""},
+					   {"bP", "bP", "", "", "bP", "bP", "bB", "bP"},
+					   {"", "", "bP", "bP", "", "bN", "bP", ""},
+					   {"", "", "", "", "", "", "", ""},
+					   {"", "", "wP", "bP", "", "", "", ""},
+					   {"", "", "wN", "", "", "wN", "wP", ""},
+					   {"wP", "wP", "", "", "wP", "wP", "wB", "wP"},
+					   {"wR", "", "wB", "", "", "wR", "wK", ""} };
 
 		System.out.print("Please enter the position and color of our Queen (row column color): ");
 
