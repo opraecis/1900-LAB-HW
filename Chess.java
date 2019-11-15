@@ -5,7 +5,7 @@ This program contains some extra code that enables the following:
 
 - Converting the board to one that's filled with 0s (our team) and 1s (the opponent's). Any empty cells are filled with '-'.
 - Printing the board.
-- Letting user pick a position for the queen to test the program.
+- Letting user pick a position of the queen to test the program.
 
 
 */
